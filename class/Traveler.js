@@ -64,3 +64,6 @@ bob.eat()
 bob.eat()
 bob.eat()
 console.log(bob)
+
+
+let deb = new Hunter ('Deb')
