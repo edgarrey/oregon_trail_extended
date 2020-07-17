@@ -5,26 +5,27 @@ class Wagon{
     }
     
     getAvailableSeatCount() {
-     return   this.capacity -= 1
+     return   this.capacity - this.passengers.length
     }
 
     join(traveler) {
-        if (this.capacity <= this.contents.length - 1){
-            return "there is no room for" + traveler
-        }else{ this.capacity -= 1}
+        if (this.passengers.length <= this.capacity){
+            this.passengers.push(traveler)
+        }
     }
 
 
     totalFood(){
-        for (let index = 0; index < this.passengers.length; index ++){
-            let totalAmountFood = this.food + this.passengers[i]
-    }
-    return totalAmountFood
+      let allFood= 0
+      for (let i= o; i < this.passengers.length; i++){
+          let currentPassenger = this.passengers[i]
+          allFood += currentPassenger.food
+      }
+      return allFood
     }
 
     shouldQuarantine(){
-        for (let i = 0; i <= this.passengers.length; i++){
-            if (){}
+        return this.passengers.some(traveler=> traveler.isHealthy === true)
         }
 
     }
