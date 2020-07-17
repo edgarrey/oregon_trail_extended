@@ -21,7 +21,7 @@ eat(){
 }
 class Doctor extends Traveler {
     constructor(name){
-    super (name, food)
+    super (name)
     this.isHealthy= true
     }
 
@@ -33,7 +33,7 @@ class Doctor extends Traveler {
 
 class Hunter extends Traveler {
     constructor(name, isHealthy){
-        super(name, is.isHealthy)
+        super(name, isHealthy)
         this.food = 2
     }
 
@@ -43,11 +43,13 @@ class Hunter extends Traveler {
         } else {
             this.food -= 2
         }
+        }
     
     giveFood(traveler, numOfFoodUnits){
         if (this.food !== 2){
             return "unable to transfer food"
-        }else this.food - numOfFoodUnits
+        }else 
+        {this.food - numOfFoodUnits
         }
     }
     
